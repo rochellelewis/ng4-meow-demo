@@ -1,5 +1,5 @@
 <?php
-namespace Edu\Cnm\CreepyOctoMeow;
+namespace Edu\Cnm\Ng4Demo;
 /**
  * Trait to Validate a mySQL Date
  *
