@@ -65,7 +65,7 @@ class PostTest extends Ng4DemoTest {
 		parent::setUp();
 
 		//create a valid post date - this gives us something pre-set to check against
-		//$this->VALID_DATE = new \DateTime();
+		$this->VALID_DATE = new \DateTime();
 
 		//create a valid SUNRISE date for date range check
 		$this->SUNRISE_DATE = new \DateTime();
