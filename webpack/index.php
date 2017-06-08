@@ -13,7 +13,7 @@ if(session_status() !== PHP_SESSION_ACTIVE) {
 
 		<title>Ng4 Meow Demo</title>
 	</head>
-	<body class="sfooter">
+	<body>
 		<!-- This custom tag much match your Angular @Component selector name in app/app.component.ts -->
 		<ng4-meow-demo>Loading&hellip;</ng4-meow-demo>
 	</body>
