@@ -13,7 +13,7 @@ export class PostsComponent implements OnInit {
 
 	newPost : Post = new Post(null, null, null, null);
 	posts : Post[] = [];
-	status : Status = new Status(null, null, null);
+	status : Status = null;
 
 	constructor(private postService : PostService) {}
 

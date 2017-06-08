@@ -33,7 +33,10 @@
 							<button class="btn btn-success" type="submit"><i class="fa fa-paper-plane"></i> Submit</button>
 							<button class="btn btn-warning" type="reset"><i class="fa fa-ban"></i> Reset</button>
 						</form>
-
+						<div *ngIf="status !== null" class="alert alert-dismissible" [ngClass]="status.type" role="alert">
+							<button type="button" class="close" aria-label="Close" (click)="status = null;"><span aria-hidden="true">&times;</span></button>
+							{{ status.message }}
+						</div>
 					</div>
 
 					<div class="col-md-8">
