@@ -12,4 +12,22 @@ export class PostService extends BaseService {
 	}
 
 	private postUrl = "./apis/post/";
+
+	getAllPosts() : Observable<Post[]> {
+		return(this.http.get(this.postUrl)
+			.map(this.extractData)
+			.catch(this.handleError));
+	}
+
+	getPostByPostId(postId : number) : Observable<Post> {
+		return(this.http.get(this.postUrl + postId)
+			.map(this.extractData)
+			.catch(this.handleError));
+	}
+
+	createPost(post : Post) : Observable<Status> {
+		return(this.http.post(this.postUrl, post)
+			.map(this.extractMessage)
+			.catch(this.handleError));
+	}
 }
