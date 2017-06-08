@@ -10,14 +10,14 @@
 						<h1>Create New Post</h1>
 
 						<!-- Create New Post Form -->
-						<form id="contact-form">
+						<form id="postForm" name="postForm" #postForm="ngForm" (submit)="createPost();">
 							<div class="form-group">
 								<label class="sr-only" for="postTitle">Title <span class="text-danger">*</span></label>
 								<div class="input-group">
 									<div class="input-group-addon">
 										<i class="fa fa-pencil" aria-hidden="true"></i>
 									</div>
-									<input type="text" class="form-control" id="postTitle" name="postTitle" placeholder="Post Title">
+									<input type="text" class="form-control" id="postTitle" name="postTitle" placeholder="Post Title" [(ngModel)]="newPost.postTitle">
 								</div>
 							</div>
 							<div class="form-group">
@@ -26,7 +26,7 @@
 									<div class="input-group-addon">
 										<i class="fa fa-envelope" aria-hidden="true"></i>
 									</div>
-									<textarea class="form-control" name="postContent" id="postContent" cols="30" rows="10" placeholder="1024 characters max."></textarea>
+									<textarea class="form-control" name="postContent" id="postContent" cols="30" rows="10" placeholder="1024 characters max." [(ngModel)]="newPost.postContent"></textarea>
 								</div>
 							</div>
 
