@@ -8,11 +8,15 @@ import {Post} from "../classes/post";
 	templateUrl: "./templates/posts.php"
 })
 
-export class PostsComponent {
+export class PostsComponent implements OnInit {
 
 	posts : Post[] = [];
 
 	constructor(protected postService: PostService) {}
+
+	ngOnInit() : void {
+		this.getAllPosts();
+	}
 
 	getAllPosts() : void {
 		this.postService.getAllPosts()
